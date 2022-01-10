@@ -98,14 +98,19 @@
             </div>
         {{- end -}}
 
+
+        {{- /* Related Content */ -}}
+        {{- partial "related.html" . -}}
+
         {{- /* Content */ -}}
         <div class="content" id="content">
             {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
         </div>
 
+
         {{- /* Footer */ -}}
         {{- partial "single/footer.html" . -}}
-
+  
         {{- /* Comment */ -}}
         {{- partial "comment.html" . -}}
     </article>
