@@ -1,9 +1,9 @@
 {{- $related := .Site.RegularPages.Related . -}}
 {{ with $related }}
-<h2>相关内容</h2>
+<h2 id="related" class="headerLink" >相关文章</h2>
 <ul>
 	{{ range . }}
-	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	<li><a href="{{ .RelPermalink }}" target="_blank" rel="noopener noreferrer">{{ .Title }}</a></li>
 	{{ end }}
 </ul>
 {{ end }}
